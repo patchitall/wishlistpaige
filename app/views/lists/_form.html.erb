@@ -1,0 +1,11 @@
+<%= simple_form_for(@list) do|f| %>
+ <%= f.error_notification %>
+ <%= f.input :name, placeholder: "Name", error: "Name must be specified" %>
+ <%= f.input :price, placeholder: "S" %>
+ <%= f.input :category, placeholder: "Category" %>
+ <%= f.input :color, placeholder: "Teal is best" %>
+ <%= f.input :size, placeholder: "Small | Medium | Large" %>
+ <%= f.input :priority, collection: 1..5 %>
+ <%= f.file_field :image %>
+ <%= f.button :submit, "Add to Wishlist!" %>
+<% end %>
